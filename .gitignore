@@ -1,0 +1,9 @@
+**/*.out
+**/*.log
+**/*.fls
+**/*.fdb_latexmk
+**/*.aux
+**/*.synctex.gz
+
+**/*.DS_Store
+**/*.xdv
