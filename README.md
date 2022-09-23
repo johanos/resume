@@ -2,6 +2,8 @@
 
 This repo holds my resumes as I make them/change them
 
+Use the LaTeX workshop extension to edit them (see `@recommended` extensions)
+
 
 ## Table of Contents
 

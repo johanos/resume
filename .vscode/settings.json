@@ -1,3 +1,17 @@
 {
-    "latex-workshop.linting.lacheck.enabled": true
+    "latex-workshop.linting.lacheck.enabled": true,
+    "latex-workshop.latex.recipe.default": "2018 latexmk (xelatex)",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "2018 latexmk (xelatex)",
+            "tools": [
+                "xelatexmk"
+            ]
+        },
+    ],
+    "cSpell.words": [
+        "crowdsourced",
+        "Markforged",
+        "Wayfair"
+    ]
 }
