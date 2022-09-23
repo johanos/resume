@@ -16,7 +16,6 @@
 \usepackage{pifont}
 \usepackage[document]{ragged2e}
 
-
 % Publications
 \usepackage{cite}
 \renewcommand\refname{\vskip -1.5cm}
@@ -33,7 +32,7 @@
 %Main Title Font Definitions
 %Used for Name  and Section Headings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def \pathtitlefont {fonts/sourcesanspro/} 
+\def \pathtitlefont {./fonts/sourcesanspro/}
 \def \firstnamefont {sourcesanspro-SemiBold}
 \def \secondnamefont {sourcesanspro-light}
 \def \titlefont {\firstnamefont}
@@ -46,7 +45,6 @@
 % \def \secondnamefont {officecodeprod-regular}
 % \def \titlefont {\firstnamefont}
 % \def \namefontsize {9.5}
-
 
 %% Source Sans Pro Title:
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,13 +139,12 @@
 \def \pathmonofont {fonts/officecodeprod/}
 \def \monofont {OfficeCodeProD-Light}
 
-
 % Set main fonts
 \usepackage{fontspec}
 \setmainfont[Color=primary, Path = \pathmainfont,BoldFont=\mainfontbold,UprightFeatures={SizeFeatures={Size=\mainfontsize}},
   BoldFeatures={SizeFeatures={Size=\mainfontsize}}]{\mainfont}
 \setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = \pathmainfont,UprightFeatures={SizeFeatures={Size=\mainfontsize}}
-  ]{\mainsansfont}
+]{\mainsansfont}
 
 % Date command
 \usepackage[absolute]{textpos}
@@ -155,33 +152,32 @@
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
 \newcommand{\lastupdated}{\begin{textblock}{60}(155,5)
-\color{date}\fontspec[Path = \pathmainfont]{\mainfont}\fontsize{8pt}{10pt}\selectfont 
-Last Updated on \today
-\end{textblock}}
+    \color{date}\fontspec[Path = \pathmainfont]{\mainfont}\fontsize{8pt}{10pt}\selectfont
+    Last Updated on \today
+  \end{textblock}}
 
 % Name command
 
-
 \newcommand{\namesection}[4]{
-\RaggedRight{
-\color{title}
-\fontsize{40pt}{50pt}
-\fontspec[Path = \pathtitlefont]{\firstnamefont}\selectfont #1 
-\fontspec[Path = \pathtitlefont]{\secondnamefont}\selectfont #2
-} \\[5pt]
+  \RaggedRight{
+    \color{title}
+    \fontsize{40pt}{50pt}
+    \fontspec[Path = \pathtitlefont]{\firstnamefont}\selectfont #1
+    \fontspec[Path = \pathtitlefont]{\secondnamefont}\selectfont #2
+  } \\[5pt]
 
-\noindent\makebox[\linewidth]{\color{title}\rule{\paperwidth}{0pt}}
-\vspace{-15pt}
+  \noindent\makebox[\linewidth]{\color{title}\rule{\paperwidth}{0pt}}
+  \vspace{-15pt}
 
-\RaggedRight{\fontspec[Path = \pathmonofont]{\monofont}\fontsize{14pt}{14pt}\selectfont #3}
+  \RaggedRight{\fontspec[Path = \pathmonofont]{\monofont}\fontsize{14pt}{14pt}\selectfont #3}
 
-\noindent\makebox[\linewidth]{\color{title}\rule{\paperwidth}{0pt}}
-\vspace{-15pt}
+  \noindent\makebox[\linewidth]{\color{title}\rule{\paperwidth}{0pt}}
+  \vspace{-15pt}
 
-\RaggedRight{\fontspec[Path = \pathmonofont]{\monofont}\fontsize{10pt}{14pt}\selectfont #4}
+  \RaggedRight{\fontspec[Path = \pathmonofont]{\monofont}\fontsize{10pt}{14pt}\selectfont #4}
 
-\noindent\makebox[\linewidth]{\color{title}\rule{\paperwidth}{0pt}}
-\vspace{-15pt}
+  \noindent\makebox[\linewidth]{\color{title}\rule{\paperwidth}{0pt}}
+  \vspace{-15pt}
 }
 
 % Section separators
@@ -192,42 +188,47 @@ Last Updated on \today
 
 % Headings command
 \titleformat{\section}{\color{title}
-\scshape\fontspec[Path = \pathtitlefont]{\titlefont}\fontsize{16pt}{24pt}\selectfont \raggedright}{}{0em}{}
+  \scshape\fontspec[Path = \pathtitlefont]{\titlefont}\fontsize{16pt}{24pt}\selectfont \raggedright}{}{0em}{}
 
 % Subheadings command
 \titleformat{\subsection}{
-\color{subheadings}\fontspec[Path = \pathsubheadingfont ]{\subheadingfont}\fontsize{\subheadingsize}{14pt}\selectfont\bfseries\uppercase}{}{0em}{}
+  \color{subheadings}\fontspec[Path = \pathsubheadingfont]{\subheadingfont}\fontsize{\subheadingsize}{14pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 %Subheadings on the right
-\newcommand{\runsubsection}[1]{
-\color{subheadings}\fontspec[Path = \pathsubheadingfont ]{\subheadingfont}\fontsize{\subheadingsize}{14pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\newcommand{\runsubsection}[2]{
+  \raisebox{-.25\height}{\includegraphics[width=5mm]{#1}} \! 
+  \color{subheadings}\fontspec[Path = \pathsubheadingfont]{\subheadingfont}\fontsize{\subheadingsize}{14pt}\selectfont\bfseries\uppercase{#2} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec[Path = \pathdescriptorfont]{\descriptorfont}\fontsize{\descriptorsize}{13pt}\selectfont {#1 \\} \normalfont}
+  \color{subheadings}\raggedright\scshape\fontspec[Path = \pathdescriptorfont]{\descriptorfont}\fontsize{\descriptorsize}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = \pathlocationfont]{\locationfont}\fontsize{\locationsize}{12pt}\selectfont {#1\\} \normalfont}
+  \color{headings}\raggedright\fontspec[Path = \pathlocationfont]{\locationfont}\fontsize{\locationsize}{12pt}\selectfont {#1\\} \normalfont}
 
 %Contact Line
 \newcommand{\contactline}[5]{\begingroup
-\setbox0=\hbox{
-\includegraphics[scale=0.23,trim={1.4cm 1.25cm -0.4cm 0cm}]{icons/main/home.png}{#1}\hspace{0.3cm}
-\includegraphics[scale=0.23,trim={0cm 1.25cm -0.4cm 0cm}]{icons/main/github.png}{#2}\hspace{0.3cm}
-\includegraphics[scale=0.23,trim={0cm 1.25cm -0.4cm 0cm}]{icons/main/linkedin.png}{#3}\hspace{0.3cm}
-\includegraphics[scale=0.23,trim={0cm 1.25cm -0.4cm 0cm}]{icons/main/mail.png}{#4}\hspace{0.3cm}
-\includegraphics[scale=0.23,trim={0cm 1.25cm -0.4cm 0cm}]{icons/main/phone.png}{#5}
-}\parbox{\wd0}{\box0}\endgroup}
+  \setbox0=\hbox{
+    \includegraphics[scale=0.23,trim={1.4cm 1.25cm -0.4cm 0cm}]{icons/main/home.png}{#1}\hspace{0.3cm}
+    \includegraphics[scale=0.23,trim={0cm 1.25cm -0.4cm 0cm}]{icons/main/github.png}{#2}\hspace{0.3cm}
+    \includegraphics[scale=0.23,trim={0cm 1.25cm -0.4cm 0cm}]{icons/main/linkedin.png}{#3}\hspace{0.3cm}
+    \includegraphics[scale=0.23,trim={0cm 1.25cm -0.4cm 0cm}]{icons/main/mail.png}{#4}\hspace{0.3cm}
+    \includegraphics[scale=0.23,trim={0cm 1.25cm -0.4cm 0cm}]{icons/main/phone.png}{#5}
+  }\parbox{\wd0}{\box0}\endgroup}
 
 %Inline Centered Logo
 \newcommand{\vcenteredinclude}[2]{\begingroup
-\setbox0=\hbox{\includegraphics[scale=0.10,trim={0 0.7cm 0cm 0cm}]{#1} {#2}}
-\parbox{\wd0}{\box0}\endgroup}
-
+  \setbox0=\hbox{\includegraphics[scale=0.10,trim={0 0.7cm 0cm 0cm}]{#1} {#2}}
+  \parbox{\wd0}{\box0}\endgroup}
 
 % Bullet Lists with fewer gaps command
-\newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}[label=\ding{212}]\itemsep1pt \parskip0pt \parsep0pt}
-{\end{itemize}\vspace{-\topsep}}
-
+\newenvironment{tightemize}
+{
+  \vspace{-\topsep}
+  \begin{itemize}[label=\ding{212}]
+    \itemsep1pt \parskip0pt \parsep0pt \fontspec[Path =
+      \pathmainfont,BoldFont=\mainfontbold]{\mainfont}\fontsize{8pt}{14pt}\selectfont
+    } {
+  \end{itemize}\vspace{-\topsep}
+}
