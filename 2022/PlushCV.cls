@@ -161,7 +161,7 @@
 \newcommand{\namesection}[4]{
   \RaggedRight{
     \color{title}
-    \fontsize{40pt}{50pt}
+    \fontsize{30pt}{40pt}
     \fontspec[Path = \pathtitlefont]{\firstnamefont}\selectfont #1
     \fontspec[Path = \pathtitlefont]{\secondnamefont}\selectfont #2
   } \\[5pt]
