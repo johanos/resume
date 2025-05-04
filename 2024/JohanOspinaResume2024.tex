@@ -23,6 +23,8 @@
 
 \documentclass[]{plushcv}
 \usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
 \pagestyle{fancy}
 \fancyhf{} % sets both header and footer to nothing
 \renewcommand{\headrulewidth}{0pt}
@@ -68,13 +70,13 @@
     \vspace{\topsep} % Hacky fix for awkward extra vertical space
     \begin{tightemize}
         \sectionsep
-        \item Productionized ML Image Classification models using Amazon SageMaker, integrating MLflow for model versioning and Hugging Face for fine tuning custom Machine Learning models.
-        \item Led cross-disciplinary development of AWS Cloud features for 3D printers, including an AWS Lambda pipeline for composite image creation using Computational Photography techniques and OpenCV\@. This spanned Hardware, Firmware, and Software integrations.
-        \item Built and deployed PyTorch ML models for sensor noise filtering and automated purge bin monitoring, which included data collection and training pipelines
-        \item Designed, Maintained, and Utilized internal systems to investigate large (Terrabytes) Time Series Telemetry, enabling insights that accelerated material print tuning time from months to weeks
-        \item Researched and compared various Image Segmentation techniques using Python, Pytorch and OpenCV to analyze first layer print performance
-        \item Developed a Typescript Coordinate System library using Linear Algebra for applying transformations to 3D points
-        \item Wrote Software and Provided Theory for a Patented 3D Printing Method with a team of 3 engineers and scientists. Separately, Mentored 2 mentees during my time at Markforged.
+        \item Productionized ML image classification models using Amazon SageMaker, integrating MLflow for model versioning and Hugging Face for fine-tuning custom machine learning models.
+        \item Led cross-disciplinary development of AWS Cloud features for 3D printers, including an AWS Lambda pipeline for composite image creation using computational photography techniques and OpenCV\@. This spanned hardware, firmware, and software integrations.
+        \item Built and deployed PyTorch ML models for sensor noise filtering and automated purge bin monitoring, which included data collection and training pipelines.
+        \item Designed, maintained, and utilized internal systems to investigate large (terabytes) time series telemetry, enabling insights that accelerated material print tuning time from months to weeks.
+        \item Researched and compared various image segmentation techniques using Python, PyTorch, and OpenCV to analyze first layer print performance.
+        \item Developed a TypeScript coordinate system library using linear algebra for applying 3D transformations.
+        \item Wrote software and provided theory for a patented 3D printing method with a team of 3 engineers and scientists. Separately, mentored 2 mentees during my time at Markforged.
     \end{tightemize}
     \sectionsep
 
@@ -82,34 +84,29 @@
     \descript{| Senior Prototyping Engineer}
     \location{June 2021 – Sep 2022 | Boston, MA}
     \begin{tightemize}
-        \item Minimized positional drift from SLAM-to-Context-Graph data structure in Unity and C\# Mobile frameworks and AngularJS/Lit Element Web Frontend using Graph Isomorphisms
-        \item Reduced technical debt in production codebases by optimizing build tools, including configuring linters, formatters, and CI/CD pipelines for improved code quality and development efficiency in a team of 5 engineers              
+        \item Minimized positional drift from SLAM-to-Context-Graph data structure in Unity and C\# Mobile frameworks and AngularJS/Lit Element Web Frontend using Graph Isomorphisms.
+        \item Reduced technical debt in production codebases by optimizing build tools, including configuring linters, formatters, and CI/CD pipelines for improved code quality and development efficiency in a team of 5 engineers.              
     \end{tightemize}
     \sectionsep
 
-    \runsubsection{icons/organizations/princeton.png}{Princeton University }
-    \descript{| Research Assistant  }
+    \runsubsection{icons/organizations/princeton.png}{Princeton University}
+    \descript{| Research Assistant}
     \location{Dec 2019 - May 2021 | Princeton, NJ}
     \begin{tightemize}
         \sectionsep
-        \item Developed a pipeline using Amazon Web Services, Internal Princeton Infrastructure, and Database systems to gather quality
-        image correspondence data from globally distributed users
-        \item Engineered a
-        \textbf{\href{https://github.com/johanos/pollefeys-self-calibration-and-metric-reconstruction}{Python Software Pipeline}}
-        to reproduce 
-        \textbf{\href{https://people.inf.ethz.ch/pomarc/pubs/PollefeysIJCV99.pdf}{research}}
-        on calculating Camera Intrinsic Parameters using Image Correspondences and Projective Geometry
+        \item Developed a pipeline using Amazon Web Services, Internal Princeton Infrastructure, and Database systems to gather quality image correspondence data from globally distributed users.
+        \item Engineered a \textbf{\href{https://github.com/johanos/pollefeys-self-calibration-and-metric-reconstruction}{Python Software Pipeline \faIcon{link}}} to reproduce \textbf{\href{https://people.inf.ethz.ch/pomarc/pubs/PollefeysIJCV99.pdf}{research \faIcon{link}}} on calculating Camera Intrinsic Parameters using Image Correspondences and Projective Geometry.
     \end{tightemize}
     \sectionsep
 
     \runsubsection{icons/organizations/wayfair.png}{Wayfair}
-    \descript{| R \& D Software Engineer II }
+    \descript{| R\&D Software Engineer II}
     \location{Internship 2016 + June 2017 - March 2019 | Boston, MA}
     \begin{tightemize}
         \sectionsep
-        \item Conducted explorations for future online shopping mediums in Virtual and Augmented Reality technologies such as: WebXR, ARKit, ARCore, Unity, BabylonJS and more
-        \item Designed, implemented, and published \textbf{\href{https://dl.acm.org/doi/10.1145/3334480.3383180}{Doll House Projection Mapping Experience}} at CHI EA '20 with a team of 3 employees
-        \item Researched ways to automate material conversion from Ray Traced Materials to Physically Based Rendering Materials
+        \item Conducted explorations for future online shopping mediums in Virtual and Augmented Reality technologies such as: WebXR, ARKit, ARCore, Unity, BabylonJS and more.
+        \item Designed, implemented, and published \textbf{\href{https://dl.acm.org/doi/10.1145/3334480.3383180}{Doll House Projection Mapping Experience \faIcon{link}}} at CHI EA '20 with a team of 3 employees.
+        \item Researched ways to automate material conversion from Ray Traced Materials to Physically Based Rendering Materials.
     \end{tightemize}
     \sectionsep
 
@@ -178,28 +175,26 @@
     React \textbullet{}
     Angular \textbullet{}
     LitElement \textbullet{}
-    ESlint \textbullet{} 
+    ESLint \textbullet{} 
     Jest \textbullet{}
     Redux \textbullet{}
-    Mocha \textbullet{} 
-    Chai  \textbullet{} 
-    Pytorch \textbullet{} 
-    Numpy \textbullet{} 
+    Mocha/Chai\textbullet{} 
+    PyTorch \textbullet{} 
+    NumPy \textbullet{} 
     Pandas \textbullet{} 
-    Matplotlib \textbullet{} 
+    Parquet \textbullet{} 
     OpenCV \textbullet {} 
     Jest \textbullet{} 
     Plotly \textbullet{}
-    FastAI \textbullet{}
-    MLFlow \textbullet{}
+    MLflow \textbullet{}
     Scikit-Learn \textbullet{}
     \sectionsep{}
     \sectionsep{}
     \subsection{Tools/Platforms}
     \sectionsep{}
     Git \textbullet{} 
-    Github \textbullet{}
-    VSCode \textbullet{}  
+    GitHub \textbullet{}
+    VS Code \textbullet{}  
     Unix \textbullet{}
     Unity \textbullet{} 
     AWS Lambda \textbullet{}
@@ -208,18 +203,22 @@
     AWS Athena \textbullet{}
     AWS ECR \textbullet{}
     AWS Kinesis \textbullet{}
-    AWS Sage Maker \textbullet{}
+    AWS SageMaker \textbullet{}
     Hugging Face \textbullet{}
-    Clickhouse \textbullet{}
+    ClickHouse \textbullet{}
     \sectionsep{}
     \sectionsep{}
     \subsection{Domain Knowledge}
     \sectionsep
     Optimization Techniques \textbullet{} \\
     Linear Algebra \textbullet{}
-    Machine Learning \textbullet{} \\ Neural Networks \textbullet{}
-    Computer Vision \textbullet{} Computer Graphics \textbullet{} 3D Printing
-    \textbullet{} Computational Photography \textbullet{} Edge Computing \textbullet{}
+    3D Printing \textbullet{} \\
+    Machine Learning \textbullet{} 
+    Neural Networks \textbullet{}
+    Computer Vision \textbullet{} 
+    Computer Graphics \textbullet{} 
+    Computational Photography \textbullet{} 
+    Edge Computing \textbullet{}
     Getting Buy-In \textbullet{}
     \sectionsep
 
