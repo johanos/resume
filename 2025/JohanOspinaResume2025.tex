@@ -1,0 +1,232 @@
+%-------------------------
+% Resume in Latex
+% Author : Johan Ospina
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% textblock for positioning
+\usepackage[absolute,overlay]{textpos}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+% Purple color from 2024 resume
+\definecolor{title}{HTML}{551a8b}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \normalsize % header section
+}{}{0em}{}[\color{title} {\titlerule[2pt]} \vspace{-4pt}]
+
+% Make all bold text purple
+\renewcommand{\textbf}[1]{\textcolor{title}{\bfseries #1}}
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\footnotesize{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+\begin{center}
+    \textbf{\color{title}\LARGE Johan Sebastian} {\textcolor{title!70}{\LARGE Ospina Buitrago}} \\ \vspace{5pt}
+    \small \textcolor{title}{\faGlobe} \texttt{\href{https://www.johanos.com}{johanos.com}} \hspace{1pt} $|$
+    \hspace{1pt} \textcolor{title}{\faGithub} \hspace{2pt} \texttt{\href{https://www.github.com/johanos}{johanos}} \hspace{1pt} $|$ 
+    \hspace{1pt} \textcolor{title}{\faLinkedin} \hspace{2pt} \texttt{\href{https://www.linkedin.com/in/johanos}{johanos}} \hspace{1pt} $|$
+    \hspace{1pt} \textcolor{title}{\faEnvelope} \hspace{2pt}\texttt{\href{mailto:johanseospina@gmail.com}{ johanseospina@gmail.com}} \hspace{1pt} $|$
+    \hspace{1pt} \textcolor{title}{\faPhone*} \hspace{2pt}\texttt{\href{tel:+1 (919) 946-5567}{(919) 946-5567}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{\textbf{EXPERIENCE}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{Markforged}}{Oct 2022 -- Present}
+      {\textbf{R\&D + Machine Learning Engineer II}}{Boston, MA}
+      \resumeItemListStart
+        \resumeItem{Productionized ML image classification models using Amazon SageMaker, integrating MLflow for model versioning and Hugging Face for fine-tuning custom machine learning models}
+        \resumeItem{Led cross-disciplinary development of AWS Cloud features for 3D printers, including an AWS Lambda pipeline for composite image creation using computational photography techniques and OpenCV}
+        \resumeItem{Built and deployed PyTorch ML models for sensor noise filtering and automated purge bin monitoring, which included data collection and training pipelines}
+        \resumeItem{Designed, maintained, and utilized internal systems to investigate large (terabytes) time series telemetry, enabling insights that accelerated material print tuning time from months to weeks}
+        \resumeItem{Researched and compared various image segmentation techniques using Python, PyTorch, and OpenCV to analyze first layer print performance}
+        \resumeItem{Developed a TypeScript coordinate system library using linear algebra for applying 3D transformations}
+        \resumeItem{Wrote software and provided theory for a patented 3D printing method with a team of 3 engineers and scientists. Separately, mentored 2 mentees during my time at Markforged}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{PTC - Vuforia}}{June 2021 -- Sep 2022}
+      {\textbf{Senior Prototyping Engineer}}{Boston, MA}
+      \resumeItemListStart
+        \resumeItem{Minimized positional drift from SLAM-to-Context-Graph data structure in Unity and C\# Mobile frameworks and AngularJS/Lit Element Web Frontend using Graph Isomorphisms}
+        \resumeItem{Reduced technical debt in production codebases by optimizing build tools, including configuring linters, formatters, and CI/CD pipelines for improved code quality and development efficiency in a team of 5 engineers}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Princeton University}}{Dec 2019 -- May 2021}
+      {\textbf{Research Assistant}}{Princeton, NJ}
+      \resumeItemListStart
+        \resumeItem{Developed a pipeline using Amazon Web Services, Internal Princeton Infrastructure, and Database systems to gather quality image correspondence data from globally distributed users}
+        \resumeItem{Engineered a \textbf{\href{https://github.com/johanos/pollefeys-self-calibration-and-metric-reconstruction}{\textcolor{title!70}{Python Software Pipeline}}} to reproduce \textbf{\href{https://people.inf.ethz.ch/pomarc/pubs/PollefeysIJCV99.pdf}{\textcolor{title!70}{research}}} on calculating Camera Intrinsic Parameters using Image Correspondences and Projective Geometry}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Wayfair}}{Internship 2016 + June 2017 -- March 2019}
+      {\textbf{R\&D Software Engineer II}}{Boston, MA}
+      \resumeItemListStart
+        \resumeItem{Conducted explorations for future online shopping mediums in Virtual and Augmented Reality technologies such as: WebXR, ARKit, ARCore, Unity, BabylonJS and more}
+        \resumeItem{Designed, implemented, and published \textbf{\href{https://dl.acm.org/doi/10.1145/3334480.3383180}{\textcolor{title!70}{Doll House Projection Mapping Experience}}} at CHI EA '20 with a team of 3 employees}
+        \resumeItem{Researched ways to automate material conversion from Ray Traced Materials to Physically Based Rendering Materials}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{\textbf{EDUCATION}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{Princeton University}}{Sep 2019 -- May 2021}
+      {\textit{Master of Science in Computer Science}}{Princeton, NJ}
+      
+    \resumeSubheading
+      {\textbf{Boston University}}{Sep 2013 -- May 2017}
+      {\textit{Bachelor of Science in Computer Engineering, Magna Cum Laude}}{Boston, MA}
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{\textbf{SKILLS}}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \footnotesize{\item{
+     \textbf{Programming Languages} {: Python, JavaScript, TypeScript, C\#, \LaTeX, Java, Bash, C++, Swift, SQL}\vspace{2pt} \\
+     \textbf{Libraries/Frameworks} {: Node.js, React, ESLint, Jest, Vitest, Redux, Mocha/Chai, PyTorch, NumPy, Pandas, Parquet, OpenCV, Plotly, MLflow, Scikit-Learn, Jupyter, Matplotlib}\vspace{2pt} \\
+     \textbf{Tools/Platforms} {: Git, GitHub, VS Code, Cursor, Unix, Unity, AWS Lambda, Docker, CircleCI, AWS Athena, AWS ECR, AWS Kinesis, AWS SageMaker, Hugging Face, ClickHouse, Kubernetes, PostgreSQL, Datadog, Amazon Bedrock, Esbuild}\vspace{2pt} \\
+     \textbf{Domain Knowledge} {: Optimization Techniques, Linear Algebra, 3D Printing, Machine Learning, Neural Networks, Computer Vision, Computer Graphics, Computational Photography, Edge Computing, Getting Buy-In, Deep Learning, NLP, Time Series Analysis, Model Deployment, A/B Testing, MLOps, Statistical Analysis, Data Engineering, Distributed Computing}\vspace{2pt} \\
+     \textbf{Languages} {: Spanish, French}
+    }}
+ \end{itemize}
+
+%-----------FOOTER FOR ATS-----------
+% Add JSON text in footer with very small font size for ATS systems
+\begin{textblock}{200}(1,15)
+    \color{white}\fontsize{1pt}{1pt}\selectfont
+    Machine Learning Engineer, Red Hat Enterprise Linux, RHEL Lightspeed, open source, Python, SQL, PyTorch, AWS SageMaker, MLflow, Hugging Face, Kubernetes, Docker, REST APIs, Jupyter notebooks, unit testing, agile development, research papers, computer vision, deep learning, neural networks, natural language processing, LLM, large language models, Google Gemini, Amazon Bedrock, distributed computing, time series analysis, model deployment, MLOps, statistical analysis, data visualization, linear algebra, mathematics, statistics, Linux, Unix, Git, GitHub, TypeScript, JavaScript, C\#, Java, Bash, C++, Swift, Node.js, React, Redux, NumPy, Pandas, OpenCV, Plotly, Scikit-Learn, Matplotlib, AWS Lambda, AWS Athena, AWS ECR, AWS Kinesis, PostgreSQL, ClickHouse, Datadog, CircleCI, Princeton University, Master of Science Computer Science, Boston University, Bachelor of Science Computer Engineering, Markforged, PTC Vuforia, Wayfair, machine learning engineer, senior prototyping engineer, research assistant, R\&D software engineer, productionized ML models, image classification, computational photography, sensor noise filtering, image segmentation, SLAM, computer graphics, augmented reality, virtual reality, WebXR, ARKit, ARCore, Unity, BabylonJS, 3D printing, computational geometry, linear algebra, optimization techniques, edge computing, distributed systems, mentoring, cross-disciplinary development, CI/CD pipelines, build tools, linters, formatters, technical debt reduction, open source contributions, research publication, camera calibration, projective geometry, computer vision algorithms, data engineering, A/B testing, statistical analysis, problem-solving, communication skills, collaboration, teamwork, leadership, innovation, growth mindset, continuous learning, adaptability, technical expertise, subject matter expert, action-oriented, empathetic communication, complex projects, sprint planning, prioritization, upstream development, evangelism, technology promotion, stakeholder communication, research to product transition, software development lifecycle, context switching, concurrent projects, positive attitude, idea sharing, open organization, contributions valued, all levels participation, complex problem solving, technical documentation, brainstorming solutions, deep research, technical information summarization, efficiency enhancement, development lifecycle optimization
+\end{textblock}
+
+%-------------------------------------------
+\end{document} 
